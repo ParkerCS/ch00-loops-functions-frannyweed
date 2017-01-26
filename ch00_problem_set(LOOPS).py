@@ -23,6 +23,20 @@ while a < 1000 and b < 1000:
 # It might be wise, for testing purposes, to also display the number that the
 # program randomly picks, until you are sure that the program works correctly
 
+import random
+'''
+x = random.randrange(1,1001)
+done = False
+while not done:
+    guess = int(input("Guess the number: "))
+    if guess < x:
+        print("Higher")
+    elif guess > x:
+        print("Lower")
+    elif guess == x:
+        done = True
+print("You guessed it!")
+'''
 # PROBLEM 3 (Dice Hi-Low - 6pts)
 # You roll five six-sided dice, one by one.
 # How big is the probability that the value of each die
@@ -31,10 +45,23 @@ while a < 1000 and b < 1000:
 # but “1, 1, 4, 3, 6” is not. Determine the
 # probability of success using a simulation of a large number of trials.
 
+c = [0]
+percent = 0
+for x in range(10000):
+    x = [0]
+    for i in range(1, 6):
+        a = random.randrange(1, 7) / i
+        x.append(a * i)
+        if a * i < x[i - 1]:
+            percent += 1
+    c.append(x)
+
+percent /= 50000
+print("The probability of each roll being greater than or equal to the previous value: ", (str(percent * 100) + "%"))
+
 # PROBLEM 4 (Number Puzzler - 6pts)
 # A, B, C, and D are all different digits.
 # The number DCBA is equal to 4 times the number ABCD.
 # What are the digits?
 # Note: to make ABCD and DCBA conventional numbers, neither A nor D can be zero.
 # Use a quadruple-nested loop to solve.
-
