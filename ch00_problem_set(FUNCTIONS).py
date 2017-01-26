@@ -5,6 +5,12 @@
 # You will need to use the input() function.
 # Make a call to that function
 
+length = str(input("Type anything: "))
+a = 0
+for i in range(len(length)):
+    a += 1
+print(a)
+
 # PROBLEM 2 (Pythagorean theorem - 4pts)
 # The Pythagorean theorem states that of a right triangle, the square of the
 # length of the diagonal side is equal to the sum of the squares of the lengths
@@ -12,6 +18,10 @@
 # Write a program that asks the user for the lengths of the two sides that meet at a right angle.
 # Then calculate the length of the third side, and display it in a nicely formatted way.
 # You may ignore the fact that the user can enter negative or zero lengths for the sides.
+side_length_one = int(input("Enter one side length of your triangle: "))
+side_length_two = int(input("Enter another side length of your triangle: "))
+hypotenuse = (side_length_one ** 2 + side_length_two ** 2)** 0.5
+print(hypotenuse)
 
 # PROBLEM 3 (Biggest, smallest, average - 4pts)
 # Make a function to ask the user to enter three numbers.

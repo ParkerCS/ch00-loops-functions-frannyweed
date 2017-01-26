@@ -6,7 +6,13 @@
 # I.e., the sequence starts with 1, 1, 2, 3, 5, 8, 13, 21,...
 # Write a program that calculates and prints the Fibonacci sequence
 # until the numbers get higher than 1000.
-
+a = 1
+b = 1
+while a < 1000 and b < 1000:
+    print(a)
+    print(b)
+    a += b
+    b += a
 
 # PROBLEM 2 (Number Guessing Game - 6pts)
 # Write a program that takes a random integer between 1 and 1000
