@@ -25,6 +25,7 @@ while a < 1000 and b < 1000:
 
 import random
 '''
+
 x = random.randrange(1,1001)
 done = False
 while not done:
@@ -65,3 +66,36 @@ print("The probability of each roll being greater than or equal to the previous 
 # What are the digits?
 # Note: to make ABCD and DCBA conventional numbers, neither A nor D can be zero.
 # Use a quadruple-nested loop to solve.
+done = False
+while not done:
+    a = random.randrange(1,10)
+    b = random.randrange(10)
+    c = random.randrange(10)
+    d = random.randrange(1,10)
+    if (d*1000) + (c*100) + (b*10) + a == 4*((a*1000) + (b*100) + (c*10) + d):
+        done = True
+    else:
+        a = random.randrange(1, 10)
+        b = random.randrange(10)
+        c = random.randrange(10)
+        d = random.randrange(1, 10)
+
+print(a,b,c,d)
+
+numbers = []
+done = False
+while not done:
+    for i in range(4):
+        if i == 0 or i == 3:
+            x = random.randrange(1,10)
+        else:
+            x = random.randrange(0,10)
+        numbers.append(x)
+    if (int(numbers[3]))*1000 + (int(numbers[2]))*100 + (int(numbers[1]))*10 + int(numbers[0]) == 4*((int(numbers[0]))*1000 + (int(numbers[1]))*100 + (int(numbers[2]))*10 + (int(numbers[3]))):
+        done = True
+    else:
+        del numbers[:]
+
+print(numbers)
+#I don't know what it would look like with a quadruple nested loop, so I just did
+#two possible loops to still get the answer.
