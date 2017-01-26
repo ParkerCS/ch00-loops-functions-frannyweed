@@ -4,7 +4,6 @@
 # Make a function which asks the user to enter a string, then prints the length of that string.
 # You will need to use the input() function.
 # Make a call to that function
-
 length = str(input("Type anything: "))
 a = 0
 for i in range(len(length)):
@@ -18,6 +17,7 @@ print(a)
 # Write a program that asks the user for the lengths of the two sides that meet at a right angle.
 # Then calculate the length of the third side, and display it in a nicely formatted way.
 # You may ignore the fact that the user can enter negative or zero lengths for the sides.
+print()
 side_length_one = int(input("Enter one side length of your triangle: "))
 side_length_two = int(input("Enter another side length of your triangle: "))
 hypotenuse = (side_length_one ** 2 + side_length_two ** 2)** 0.5
@@ -28,6 +28,24 @@ print(hypotenuse)
 # Then print the largest, the smallest, and their average, rounded to 2 decimals.
 # Display the answers in a "nicely" formatted way.
 # Make a call to your function.
+print()
+one = int(input("Enter one number: "))
+two = int(input("Enter another number: "))
+three = int(input("Enter one more number: "))
+if one >= two and one >= three:
+    print("One is the largest")
+elif two >= one and two >= three:
+    print("Two is the largest")
+else:
+    print("Three is the largest")
+if one <= two and one <= three:
+    print("One is the smallest")
+elif two <= one and two <= three:
+    print("Two is the smallest")
+else:
+    print("Three is the smallest")
+average = round((int(one + two + three)/3),2)
+print(average, "is the average")
 
 # PROBLEM 4 (e to the... - 3pts)
 # Calculate the value of e (from the math library) to the power of -1, 0, 1, 2, and 3.

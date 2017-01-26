@@ -24,12 +24,12 @@ while a < 1000 and b < 1000:
 # program randomly picks, until you are sure that the program works correctly
 
 import random
-'''
 
 x = random.randrange(1,1001)
 done = False
 while not done:
     guess = int(input("Guess the number: "))
+    print(x)
     if guess < x:
         print("Higher")
     elif guess > x:
@@ -37,7 +37,7 @@ while not done:
     elif guess == x:
         done = True
 print("You guessed it!")
-'''
+
 # PROBLEM 3 (Dice Hi-Low - 6pts)
 # You roll five six-sided dice, one by one.
 # How big is the probability that the value of each die
