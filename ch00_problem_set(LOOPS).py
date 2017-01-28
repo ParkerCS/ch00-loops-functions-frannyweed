@@ -29,7 +29,6 @@ x = random.randrange(1,1001)
 done = False
 while not done:
     guess = int(input("Guess the number: "))
-    print(x)
     if guess < x:
         print("Higher")
     elif guess > x:
@@ -48,7 +47,7 @@ print("You guessed it!")
 
 c = [0]
 percent = 0
-for x in range(10000):
+for i in range(10000):
     x = [0]
     for i in range(1, 6):
         a = random.randrange(1, 7) / i
@@ -97,5 +96,10 @@ while not done:
         del numbers[:]
 
 print(numbers)
-#I don't know what it would look like with a quadruple nested loop, so I just did
-#two possible loops to still get the answer.
+
+for a in range(1,10):
+    for b in range(0,10):
+        for c in range(0,10):
+            for d in range(1,10):
+                if int(str(d)+str(c)+str(b)+ str(a)) == 4 * int(str(a) + str(b) + str(c) + str(d)):
+                    print(a,b,c,d)
