@@ -1,3 +1,4 @@
+#18/22
 # LOOPS (22pts TOTAL)
 
 # PROBLEM 1 (Fibonacci - 4pts)
@@ -37,6 +38,8 @@ while not done:
         done = True
 print("You guessed it!")
 
+# Lee - Help the user out.  Higher and Lower are not great feedback.  Is the number I guessed higher or is the number I am supposed to guess higher? (-1)
+
 # PROBLEM 3 (Dice Hi-Low - 6pts)
 # You roll five six-sided dice, one by one.
 # How big is the probability that the value of each die
@@ -58,6 +61,8 @@ for i in range(10000):
 
 percent /= 50000
 print("The probability of each roll being greater than or equal to the previous value: ", (str(percent * 100) + "%"))
+
+# Lee - This one doesn't work correctly.  In the for loop, you divide the random number by i.  That makes it a fraction that changes through the loop, not a random roll at all.  Percent is a bad variable name for a tracking number.  You divided percent by 50000.  Where does that come from (-3)
 
 # PROBLEM 4 (Number Puzzler - 6pts)
 # A, B, C, and D are all different digits.
