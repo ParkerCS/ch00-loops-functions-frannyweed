@@ -1,3 +1,5 @@
+
+#19/20
 #SECTION 2 - FUNCTIONS (20PTS TOTAL)
 
 #PROBLEM 1 (Length of String - 3pts)
@@ -77,6 +79,8 @@ def integer(x):
     print(round(x))
 
 integer(random.random())
+
+# Lee - This does not give the full range.  This is 1 to 9 (-1)
 
 # PROBLEM 6 (add me, multiply me - 3pts)
 # Make a function which takes in two integers and RETURNS their sum AND their product.
